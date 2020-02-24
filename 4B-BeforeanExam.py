@@ -1,3 +1,5 @@
+#https://codeforces.com/contest/4/problem/B
+
 d, sumTime = map(int, input().split())
 minTimel = []
 maxTimel = []
