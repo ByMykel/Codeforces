@@ -1,3 +1,5 @@
+#https://codeforces.com/contest/4/problem/C
+
 n = int(input())
 words = {}
 solution = []
