@@ -1,3 +1,5 @@
+#https://codeforces.com/contest/1285/problem/A
+
 n = int(input())
 s = input()
  
