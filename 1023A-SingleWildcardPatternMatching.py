@@ -1,3 +1,5 @@
+#https://codeforces.com/contest/1023/problem/A
+
 n, m = map(int, input().split())
 s = input()
 t = input()
