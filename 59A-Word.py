@@ -2,4 +2,4 @@
 
 s = input()
 c = sum(1 for i in s if i.isupper())
-print(s.upper() if c > len(s)/2 else s.lower())
+print(s.upper() if c > len(s) / 2 else s.lower())
