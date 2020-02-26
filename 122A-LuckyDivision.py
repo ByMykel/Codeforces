@@ -2,7 +2,7 @@
 
 n = int(input())
 l = False
-if str(n).count("4")+str(n).count("7") == len(str(n)):
+if str(n).count("4") + str(n).count("7") == len(str(n)):
     l = True
 else:
     for i in range(1, n):
