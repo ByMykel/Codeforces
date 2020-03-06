@@ -34,8 +34,8 @@ if s1 > 0 and s2 > 0:
     if s1 - 2 >= 0:
         s1 -= 2
         if s1 >= 4:
-            ntaxis += int(s1 / 4)
-            s1 -= int(s1 / 4)*4
+            ntaxis += s1 // 4
+            s1 -= (s1 // 4)*4
             if s1 > 0:
                 ntaxis += 1 
         elif s1 > 0:
@@ -47,8 +47,8 @@ elif s1 == 0 and s2 > 0:
     s2 -= 1
 elif s1 > 0 and s2 == 0:
     if s1 >= 4:
-        ntaxis += int(s1 / 4)
-        s1 -= int(s1 / 4)*4
+        ntaxis += s1 // 4
+        s1 -= (s1 // 4)*4
         if s1 > 0:
             ntaxis += 1
     else:
