@@ -4,9 +4,7 @@ n = int(input())
 games = input()
 gamesA = len(games.replace("D", ""))
 gamesD = n - gamesA
-if gamesA > gamesD:
-    print("Anton")
-elif gamesA < gamesD:
-    print("Danik")
-else:
+if gamesA == gamesD:
     print("Friendship")
+else:
+    print("Anton" if gamesA > gamesD else "Danik")
