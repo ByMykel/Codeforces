@@ -18,5 +18,5 @@ else:
   
 """
 One line solution:
-print(str(bin(int(input()))).count("1"))
+print(bin(int(input())).count("1"))
 """
