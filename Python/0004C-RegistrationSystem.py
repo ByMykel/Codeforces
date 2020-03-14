@@ -2,14 +2,13 @@
 
 n = int(input())
 words = {}
-solution = []
+solution = [0] * n
 for i in range(n):
     word = input()
     if word in words:
-        solution.append(f"{word}{words[word]}")
+        solution[i] = f"{word}{words[word]}"
         words[word] += 1
     else:
-        solution.append("OK")
+        solution[i] = "OK"
         words[word] = 1
-for i in solution:
-    print(i)
+print("\n".join(solution))
