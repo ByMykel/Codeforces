@@ -15,3 +15,8 @@ else:
             n -= bacteria 
             solution += 1
     print(solution)
+  
+"""
+One line solution:
+print(str(bin(int(input()))).count("1"))
+"""
