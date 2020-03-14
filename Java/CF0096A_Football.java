@@ -20,9 +20,7 @@ import java.util.Scanner;
 static class TaskA   {
 public void solve(int testNumber, Scanner in, PrintWriter out) {
         String s = in.next();
-        if (s.contains("1111111")) {
-            out.print("YES");
-        } else if (s.contains("0000000")) {
+        if (s.contains("1111111") || s.contains("0000000")) {
             out.print("YES");
         } else {
             out.print("NO");
