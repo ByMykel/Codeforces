@@ -1,3 +1,5 @@
+#https://codeforces.com/contest/189/problem/A
+
 n, a, b, c = map(int, raw_input().split())
 solution = 0
 for i in xrange(n+1):
