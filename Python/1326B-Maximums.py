@@ -2,8 +2,10 @@
 
 n = int(input())
 b = list(map(int, input().split()))
+solution = [0] * n
 x = 0
 for i in range(n):
-    a = b[i] + x
-    x = max(a, x)
-    print(a, end=" ")
+    solution[i] = b[i] + x
+    if solution[i] > x:
+        x = solution[i]
+print(" ".join(map(str, solution)))
