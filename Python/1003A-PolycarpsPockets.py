@@ -8,8 +8,8 @@ last = a[0]
 for i in a[1:]:
     if last == i:
         count += 1
+        solution = max(solution, count)
     else:
         count = 1
-    solution = max(solution, count)
     last = i
 print(solution)
