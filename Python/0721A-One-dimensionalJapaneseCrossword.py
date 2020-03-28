@@ -6,6 +6,6 @@ if "B" not in s:
     print(0)
 else:
     s = s.split("W")
-    solution = list(map(len, filter(lambda x: len(x) > 0, s)))
+    solution = list(filter(lambda x: x > 0, map(len, s)))
     print(len(solution))
     print(" ".join(map(str, solution)))
