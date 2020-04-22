@@ -4,7 +4,6 @@ t = int(input())
 for _ in range(t):
     n = int(input())
     for i in range(2, 30):
-        outout = n / (2**i - 1)
-        if outout % 1 == 0:
-            print(int(outout))
+        if n % ((1 << i) - 1) == 0:
+            print(n // (2**i - 1))
             break
