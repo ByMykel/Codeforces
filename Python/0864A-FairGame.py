@@ -8,12 +8,15 @@ else:
     a = [0] * n
     for i in range(n):
         a[i] = int(input())
-    if len(set(a)) == 1 or len(set(a)) > 2:
+    a = sorted(a)
+    if a[0] != a[n//2-1]:
         out = False
-    if out and a.count(a[0]) != n//2:
+    if a[n//2] != a[n-1]:
         out = False
-    if out == False:
-        print("NO")
-    else:
+    if a[0] == a[n-1]:
+        out = False
+    if out:
         print("YES")
-        print(*set(a))
+        print(a[0], a[n-1])
+    else:
+        print("NO")
