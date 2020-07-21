@@ -18,8 +18,6 @@ for _ in range(t):
             close += 1 
     if even % 2 == 0:
         print("YES")
-    elif even == 0 or odd == 0:
-        print("YES")
     elif close == 0:
         print("NO")
     else:
