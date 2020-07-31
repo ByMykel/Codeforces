@@ -1,7 +1,7 @@
 #https://codeforces.com/problemset/problem/1206/B
 
 n = int(input())
-a = sorted(list(map(int, input().split())))
+a = list(map(int, input().split()))
 ans = 0
 neg = 0
 zer = 0
