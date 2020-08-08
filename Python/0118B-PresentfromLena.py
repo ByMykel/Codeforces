@@ -6,8 +6,8 @@ space = n*2
 k = 1
 for i in range(2*n+1):
     numbers = [str(i) for i in range(count)]
-    numbers += [str(i) for i in range(count - 2, -1, -1)]
-    print(space * " " + " ".join(numbers))
+    numbers += [str(i) for i in range(count-2, -1, -1)]
+    print(space*" " + " ".join(numbers))
     if count == n+1:
         k = -k
     count += k
