@@ -12,17 +12,8 @@ t = ini()
 for _ in range(t):
     n = ini()
     a = inl()
-    out = False
-    i = 0
-    j = 2
-    while j < n:
-        if a[i] + a[i+1] <= a[j]:
-            out = True
-            break
-        else:
-            j += 1
-    if out:
-        ans.append(f"{i+1} {i+2} {j+1}")
+    if a[0] + a[1] <= a[n-1]:
+        ans.append(f"{1} {2} {n}")
     else:
         ans.append("-1")
 print('\n'.join(ans))
