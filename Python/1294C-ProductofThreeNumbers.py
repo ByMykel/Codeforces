@@ -16,8 +16,6 @@ for _ in range(t):
     i = 2
     tmp = []
     while n >= i * i:
-        if i == 5 and n % 5 == 0 and 4 in tmp:
-            tmp.remove(4)
         if n % i == 0:
             tmp.append(i)
         if len(tmp) == 3:
@@ -27,12 +25,12 @@ for _ in range(t):
         ans.append("NO")
     elif len(tmp) >= 2:
         if len(tmp) == 3:
-            y = (n / (tmp[0] * tmp[2])).is_integer()
             if tmp[0] * tmp[1] * tmp[2] == n:
                 ans.append("YES")
                 andsindex[len(ans) - 1] = f"{tmp[0]} {tmp[1]} {tmp[2]}"
                 continue
-            elif y and n / (tmp[0] * tmp[2]) not in tmp:
+            y = (n / (tmp[0] * tmp[2])).is_integer()
+            if y and n / (tmp[0] * tmp[2]) not in tmp:
                 ans.append("YES")
                 andsindex[len(ans) - 1] = f"{tmp[0]} {tmp[2]} {n // (tmp[0] * tmp[2])}"
                 continue
