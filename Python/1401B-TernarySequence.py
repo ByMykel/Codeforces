@@ -18,12 +18,9 @@ for _ in range(t):
     tmp = x * 2
     a[2] -= x
     b[1] -= x
-    x = min(b[2], a[2])
+    x = min(b[2], a[2] + a[0])
     b[2] = max(0, b[2] - x)
     a[2] = max(0, a[2] - x)
-    x = min(b[2], a[0])
-    b[2] = max(0, b[2] - x)
-    a[0] = max(0, a[0] - x)
     tmp -= min(b[2], a[1]) * 2
     ans.append(tmp)
 out(ans)
