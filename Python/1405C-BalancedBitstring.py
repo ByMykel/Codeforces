@@ -13,31 +13,21 @@ for _ in range(t):
     n, k = inm()
     s = list(ins())
     ans = True
+    count0 = count1 = 0
     for i in range(k):
-        tmp = -1
+        seen0 = seen1 = False
         for j in range(i, n, k):
-            if s[j] != "?":
-                if tmp != -1 and s[j] != tmp:
-                    ans = False
-                    break
-                tmp = s[j]
-        if not ans:
-            break
-        else:
-            if s[i] == "?":
-                s[i] = tmp
-    if ans:
-        count0 = count1 = x = 0
-        for i in range(k):
-            if s[i] == "0":
-                count0 += 1
-            elif s[i] == "1":
-                count1 += 1
-            else:
-                x += 1
-        if x == 0 and count0 != count1:
+            if s[j] == "0":
+                seen0 = True
+            elif s[j] == "1":
+                seen1 = True
+        if seen0 and seen1:
             ans = False
-        elif count0 != count1:
-            if min(count0, count1) + x < max(count0, count1):
-                ans = False
+            break
+        elif seen0:
+            count0 += 1
+        elif seen1:
+            count1 += 1
+    if count0 > k//2 or count1 > k//2:
+        ans = False
     print("YES" if ans else "NO")
