@@ -11,11 +11,9 @@ out = lambda x, s='\n': print(s.join(map(str, x)))
 t = ini()
 for _ in range(t):
     n = ini()
-    a = sorted(inl())
+    a = inl()
     first = second = -1
     for i in range(101):
-        if first != -1 and second != -1:
-            break
         if a.count(i) > 1:
             continue
         if a.count(i) == 1 and first == -1:
