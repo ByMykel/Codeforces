@@ -9,4 +9,4 @@ inl = lambda: list(map(int, input().split()))
 out = lambda x, s='\n': print(s.join(map(str, x)))
 
 n, m, a, b = inm()
-print(min(n*a, (n+m-1) // m * b, n//m * b + (n - (n//m) * m) * a))
+print(min(n*a, (n+m-1) // m * b, n//m * b + n%m * a))
