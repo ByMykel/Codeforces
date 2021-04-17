@@ -1,0 +1,19 @@
+#https://codeforces.com/problemset/problem/1216/A
+
+import sys
+input = sys.stdin.readline
+ins = lambda: input().rstrip()
+ini = lambda: int(input().rstrip())
+inm = lambda: map(int, input().rstrip().split())
+inl = lambda: list(map(int, input().split()))
+out = lambda x, s='\n': print(s.join(map(str, x)))
+
+n = ini()
+s = list(ins())
+ans = 0
+for i in range(0, n - 1, 2):
+    if s[i] == s[i + 1]:
+        ans += 1
+        s[i] = "a" if s[i] != "a" else "b"
+print(ans)
+out(s, "")
