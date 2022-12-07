@@ -1,6 +1,5 @@
 #https://codeforces.com/contest/1650/problem/A
 
-from pickle import FALSE
 import sys
 input = sys.stdin.readline
 ins = lambda: input().rstrip()
